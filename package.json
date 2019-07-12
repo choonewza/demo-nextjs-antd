@@ -1,0 +1,32 @@
+{
+  "name": "demo-nextjs-antd",
+  "version": "1.0.0",
+  "description": "NextJS and Ant Design (CSS & LESS)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "less": "^3.9.0",
+    "antd": "^3.20.1",
+    "next": "9.0.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.12.0"
+  },
+  "keywords": [
+    "NextJS",
+    "Ant",
+    "Design",
+    "CSS",
+    "LESS"
+  ],
+  "author": "choonewza@gmail.com",
+  "license": "MIT"
+}
