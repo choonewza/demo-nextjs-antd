@@ -1,6 +1,9 @@
-This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
+This project is CATKM Social Network.ß
 
-Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.
+npm install --save @zeit/next-css @zeit/next-less less antd axios lorem-ipsum react-slick slick-carousel uuid lodash validator crypto-js
+
+npm install --save-dev babel-plugin-import
+
 
 ## Table of Contents
 

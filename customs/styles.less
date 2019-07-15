@@ -1,10 +1,294 @@
 @import "~antd/dist/antd.less";
 
-@font-size: 50px;
-.example-less {
-  font-size: @font-size;
-  color: red;
-  text-align: center;
-  width:100%;
-  margin:16px;
+//------ Antd Styles ------
+@theme-bg: #f2f2f2;
+@theme-header-bg: #FFF;
+@theme-header-text: #000;
+@theme-header-highlight-text: #d45744;
+@theme-header-highlight-bg: #f9d3ca;
+@theme-border-color: #ccc;
+
+// Layout
+@layout-header-background: @theme-header-bg;
+@layout-header-height: 49px;
+@layout-footer-background: @theme-header-bg;
+@layout-sider-background: @theme-bg;
+@layout-header-padding: 0 8px;
+@layout-footer-padding: 24px 8px;
+
+// Menu
+@menu-inline-toplevel-item-height: 40px;
+@menu-item-height: 40px;
+@menu-collapsed-width: 80px;
+@menu-bg: @theme-header-bg;
+@menu-popup-bg: @theme-header-bg;
+@menu-item-color: @theme-header-text;
+@menu-highlight-color: @theme-header-highlight-text;
+@menu-item-active-bg: @theme-header-highlight-bg;
+@menu-item-active-border-width: 3px;
+@menu-item-group-title-color: @theme-header-text;
+
+// Buttons
+@btn-font-weight: 400;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-base;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+@btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+@btn-primary-color: #fff;
+@btn-primary-bg: @theme-header-highlight-text;
+@btn-default-color: @text-color;
+@btn-default-bg: @component-background;
+@btn-default-border: @border-color-base;
+@btn-danger-color: @error-color;
+@btn-danger-bg: @background-color-base;
+@btn-danger-border: @border-color-base;
+@btn-disable-color: @disabled-color;
+@btn-disable-bg: @disabled-bg;
+@btn-disable-border: @border-color-base;
+@btn-padding-base: 0 @padding-md - 1px;
+@btn-font-size-lg: @font-size-lg;
+@btn-font-size-sm: @font-size-base;
+@btn-padding-lg: @btn-padding-base;
+@btn-padding-sm: 0 @padding-xs - 1px;
+@btn-height-base: 32px;
+@btn-height-lg: 40px;
+@btn-height-sm: 24px;
+@btn-circle-size: @btn-height-base;
+@btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-sm: @btn-height-sm;
+@btn-group-border: @primary-5;
+
+//Font
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+
+// Drawer
+@drawer-header-padding: 16px 24px;
+@drawer-body-padding: 0;
+
+.ant-layout-header {
+    -webkit-box-shadow: 0px 1px 1px @theme-border-color;
+    -moz-box-shadow: 0px 1px 1px @theme-border-color;
+    box-shadow: 0px 1px 1px @theme-border-color;
 }
+
+//------ Antd Styles End ------
+
+//------ Custom Styles ------
+@mar-pad-0: 0px;
+@mar-pad-1: 8px;
+@mar-pad-2: 16px;
+@mar-pad-3: 24px;
+@mar-pad-4: 32px;
+@mar-pad-5: 40px;
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+0,eeeeee+100 */
+    background: rgb(242, 242, 242);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(238, 238, 238, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(242, 242, 242, 1) 0%, rgba(238, 238, 238, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 0%, rgba(238, 238, 238, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#eeeeee', GradientType=0);
+    /* IE6-9 */
+}
+
+.full-width {
+    width: 100%;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.mar-b-item {
+    margin-bottom: 16px;
+}
+
+.pad-0 {
+    padding: 0 !important;
+}
+
+.mar-0 {
+    margin: 0 !important;
+}
+
+.pad-t-1 {
+    padding-top: @mar-pad-1  !important;
+}
+
+.pad-t-2 {
+    padding-top: @mar-pad-2  !important;
+}
+
+.pad-b-1 {
+    padding-bottom: @mar-pad-1  !important;
+}
+
+.pad-b-2 {
+    padding-bottom: @mar-pad-2  !important;
+}
+
+.pad-l-1 {
+    padding-left: @mar-pad-1  !important;
+}
+
+.pad-l-2 {
+    padding-left: @mar-pad-2  !important;
+}
+
+.pad-r-1 {
+    padding-right: @mar-pad-1  !important;
+}
+
+.pad-r-2 {
+    padding-right: @mar-pad-2  !important;
+}
+
+.mar-t-1 {
+    margin-top: @mar-pad-1  !important;
+}
+
+.mar-t-2 {
+    margin-top: @mar-pad-2  !important;
+}
+
+.mar-b-1 {
+    margin-bottom: @mar-pad-1  !important;
+}
+
+.mar-b-2 {
+    margin-bottom: @mar-pad-2  !important;
+}
+
+.mar-l-1 {
+    margin-left: @mar-pad-1  !important;
+}
+
+.mar-l-2 {
+    margin-left: @mar-pad-2  !important;
+}
+
+.mar-r-1 {
+    margin-right: @mar-pad-1  !important;
+}
+
+.mar-r-2 {
+    margin-right: @mar-pad-2  !important;
+}
+
+.nav-menu {
+    text-align: right;
+}
+
+.container {
+    padding: @mar-pad-0 @mar-pad-2 @mar-pad-0 @mar-pad-2;
+}
+
+//------ Custom Styles End ------
+
+//------ Responsive Screen End------
+// XS - Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .container {
+        padding: @mar-pad-0;
+    }
+
+    .container-left-side,
+    .container-main-side,
+    .container-center-side,
+    .container-right-side {
+        padding: 0;
+    }
+
+    .container-center-side {
+        order: 3;
+    }
+
+    .container-right-side {
+        order: 2;
+    }
+
+    .hide-xs {
+        display: none !important;
+    }
+}
+
+// SM - Small Devices (more than 576px)
+@media (min-width: 575.99px) {
+    .container-left-side {
+        padding: 0 8px 0 0;
+    }
+
+    .container-main-side {
+        padding: 0 0 0 8px;
+    }
+
+    .container-center-side {
+        order: 3;
+    }
+
+    .container-right-side {
+        order: 2;
+    }
+}
+
+// MD - Medium devices (tablets, more than 768px)
+@media (min-width: 767.99px) {
+    .container-left-side {
+        padding: 0 8px 0 0;
+    }
+
+    .container-center-side,
+    .container-right-side {
+        padding: 0;
+    }
+
+    .container-center-side {
+        order: 3;
+        padding: 0;
+    }
+
+    .container-right-side {
+        order: 2;
+        padding: 0;
+    }
+}
+
+// LG - Large devices (desktops, more than 992px)
+@media (min-width: 991.99px) {
+    .container-center-side {
+        order: 2;
+        padding: 0 8px 0 0;
+    }
+
+    .container-right-side {
+        order: 3;
+        padding: 0 0 0 8px;
+    }
+}
+
+// XL - Extra large devices (large desktops, more than 1200px)
+@media (min-width: 1199.99px) {}
+
+// XL - Super Extra large devices (supder large desktops, more than 1600px)
+@media (min-width: 1599.99px) {}
+
+//------ Responsive Screen End------

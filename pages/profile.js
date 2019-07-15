@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import axios from "axios";
-import ThreeColumnLayout from "../layouts/ThreeColumnLayout";
+import TwoColumnLayout from "../layouts/TwoColumnLayout";
 import LeftSidePanel from "../components/LeftSidePanel";
 import RightSidePanel from "../components/RightSidePanel";
 import NewPost from "../components/NewPost";
@@ -13,11 +13,10 @@ const onPanelChange = (value, mode) => {
   console.log(value, mode);
 };
 
-const Home = props => {
-  const { userAgent, topten, contents, categories } = props;
+const Profile = props => {
+  const { userAgent, contents, categories } = props;
   return (
-    <ThreeColumnLayout
-      navID="home"
+    <TwoColumnLayout
       leftSideComponent={<LeftSidePanel />}
       leftSideDrawerComponent={<LeftSidePanel />}
       rightSideComponent={<RightSidePanel />}
@@ -26,21 +25,19 @@ const Home = props => {
     >
       <ListContents data={contents} />
 
-    </ThreeColumnLayout>
+    </TwoColumnLayout>
   );
 };
 
-Home.getInitialProps = async ({ req }) => {
+Profile.getInitialProps = async ({ req }) => {
   const userAgent = req ? req.headers["user-agent"] : navigator.userAgent;
-  const contentsResult = await axios.get("http://localhost:3000/api/contents");
+  const contentsResult = await axios.get("http://localhost:3000/api/profile");
   const contents = await contentsResult.data;
-  const toptenResult = await axios.get("http://localhost:3000/api/topten");
-  const topten = await toptenResult.data;
   const categoriesResult = await axios.get(
     "http://localhost:3000/api/categories"
   );
   const categories = await categoriesResult.data;
-  return { userAgent, topten, contents, categories };
+  return { userAgent, contents, categories };
 };
 
-export default Home;
+export default Profile;

@@ -1,7 +1,7 @@
 {
-  "name": "demo-nextjs-antd",
+  "name": "catkmsocial-website",
   "version": "1.0.0",
-  "description": "NextJS and Ant Design (CSS & LESS)",
+  "description": "CAT KM Social Networkß",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -11,11 +11,20 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
-    "less": "^3.9.0",
     "antd": "^3.20.1",
+    "axios": "^0.19.0",
+    "crypto-js": "^3.1.9-1",
+    "dayjs": "^1.8.15",
+    "less": "^3.9.0",
+    "lodash": "^4.17.14",
+    "lorem-ipsum": "^2.0.3",
     "next": "9.0.1",
     "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react-dom": "16.8.6",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1",
+    "uuid": "^3.3.2",
+    "validator": "^11.1.0"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.12.0"

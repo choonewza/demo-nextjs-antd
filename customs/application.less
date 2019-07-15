@@ -1,0 +1,166 @@
+@import "~antd/dist/antd.less";
+@import "~slick-carousel/slick/slick.less";
+
+@theme-bg: #f2f2f2;
+@theme-header-bg: #FFF;
+@theme-header-text: #000;
+@theme-header-highlight-text: #d45744;
+@theme-header-highlight-bg: #f9d3ca;
+
+
+// Layout
+@layout-header-background: @theme-header-bg;
+@layout-header-height: 49px;
+@layout-footer-background: @theme-header-bg;
+@layout-sider-background: @theme-bg;
+@layout-header-padding: 0 8px;
+@layout-footer-padding: 24px 8px;
+
+// Menu
+@menu-inline-toplevel-item-height: 40px;
+@menu-item-height: 40px;
+@menu-collapsed-width: 80px;
+@menu-bg: @theme-header-bg;
+@menu-popup-bg: @theme-header-bg;
+@menu-item-color: @theme-header-text;
+@menu-highlight-color: @theme-header-highlight-text;
+@menu-item-active-bg: @theme-header-highlight-bg;
+@menu-item-active-border-width: 3px;
+@menu-item-group-title-color: @theme-header-text;
+
+// Card
+// ---
+@card-head-color: @heading-color;
+@card-head-background: transparent;
+@card-head-padding: 16px;
+@card-inner-head-padding: 12px;
+@card-padding-base: 24px;
+@card-actions-background: #fff;
+@card-background: #cfd8dc;
+@card-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+@card-radius: @border-radius-sm;
+
+// Buttons
+@btn-font-weight: 400;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-base;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+@btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+
+@btn-primary-color: #fff;
+@btn-primary-bg: @theme-header-highlight-text;
+
+@btn-default-color: @text-color;
+@btn-default-bg: @component-background;
+@btn-default-border: @border-color-base;
+
+@btn-danger-color: @error-color;
+@btn-danger-bg: @background-color-base;
+@btn-danger-border: @border-color-base;
+
+@btn-disable-color: @disabled-color;
+@btn-disable-bg: @disabled-bg;
+@btn-disable-border: @border-color-base;
+
+@btn-padding-base: 0 @padding-md - 1px;
+@btn-font-size-lg: @font-size-lg;
+@btn-font-size-sm: @font-size-base;
+@btn-padding-lg: @btn-padding-base;
+@btn-padding-sm: 0 @padding-xs - 1px;
+
+@btn-height-base: 32px;
+@btn-height-lg: 40px;
+@btn-height-sm: 24px;
+
+@btn-circle-size: @btn-height-base;
+@btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-sm: @btn-height-sm;
+
+@btn-group-border: @primary-5;
+
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+
+// Drawer
+// ---
+@drawer-header-padding: 16px 24px;
+@drawer-body-padding: 0;
+
+//Container
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.make-container(@minWidth, @breakpoint) {
+  @media (min-width: @minWidth) {
+      .container {
+          max-width: @breakpoint;
+      }
+  }
+}
+
+.make-container(@screen-xs-min, @screen-xs);
+.make-container(@screen-sm-min, @screen-sm);
+.make-container(@screen-md-min, @screen-md);
+.make-container(@screen-lg-min, @screen-lg);
+.make-container(@screen-xl-min, @screen-xl);
+.make-container(@screen-xxl-min, @screen-xxl); // Optional
+
+.full-width{
+  width: 100%;
+}
+
+.pad-0{
+  padding: 0!important;
+}
+
+.mar-0{
+  margin:0!important;
+}
+
+.align-left{
+  text-align: left;
+}
+.align-center{
+  text-align: center;
+}
+.align-right{
+  text-align: right;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.color-header{
+  color: #d45744 !important;
+}
+
+h1,h2,h3,h4,h5{
+  padding:0!important;
+  margin:0!important;
+}
+
+a:hover { 
+  color: #d45744!important;
+}
+
+a.link:link{
+  color:gray;
+}
+
+@media (min-width: @screen-sm-min) {
+  .show-mobile {
+    display: none;
+  }
+}
+@media (max-width: @screen-sm) {
+  .show-desktop {
+    display: none;
+  }
+}
